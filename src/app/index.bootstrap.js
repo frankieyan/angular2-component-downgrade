@@ -5,11 +5,10 @@ import '!!file-loader?name=[name].[ext]!../favicon.ico';
 
 // main App module
 import "./index.module";
+import upgradeAdapter from "./index.upgradeAdapter"
 
 import "../assets/styles/sass/index.scss";
 
 angular.element(document).ready(function () {
-  angular.bootstrap(document, ['myNgApp'], {
-    strictDi: true
-  });
+  upgradeAdapter.bootstrap(document, ['myNgApp'], {strictDi: true});
 });
